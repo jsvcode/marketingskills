@@ -1,0 +1,21 @@
+{
+  "skill_name": "responsive-audit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our pricing page looks weird on phones. Check https://example.com/pricing at 360, 768, 1280 and 1920 px.",
+      "expected_output": "Should capture full-page screenshots at each viewport and check horizontal overflow via scrollWidth vs clientWidth, name offending elements, check mobile navigation, tap target size, input font size, viewport meta zoom blocking, sticky elements covering content, and responsive images. Should test widths around discovered breakpoints. Findings use RES- IDs with the exact viewport and a screenshot named after the ID.",
+      "assertions": [
+        "Tests all four requested viewports",
+        "Measures horizontal overflow and names offending elements",
+        "Checks mobile navigation",
+        "Checks tap target size",
+        "Checks viewport meta for blocked zoom",
+        "Checks sticky or fixed elements",
+        "Names screenshots after finding IDs",
+        "Provides a page-by-viewport matrix"
+      ],
+      "files": []
+    }
+  ]
+}

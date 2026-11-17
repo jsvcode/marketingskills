@@ -27,6 +27,10 @@
     "source_description_sha256": "619168d09f7a8fcb273df85ff9414a45b2a560c63aff3e4476b3e069a60b06e8",
     "description": "Choose attribution models, reconcile revenue dashboards, and investigate channel impact using multi-touch, MMM, incrementality, and first-party attribution."
   },
+  "audit-report": {
+    "source_description_sha256": "3565f4477e3d5180512eb7f4fde6dbea07f059802a5407ed692cda235c0947f0",
+    "description": "Write website review findings as a developer-ready report: severity scale, finding template, confidential security section, CSV export, and cover note."
+  },
   "churn-prevention": {
     "source_description_sha256": "f3b841fef14a812bbf6181d7d3f42c08a9e7a264e9716a4bec0fdebd7b683673",
     "description": "Reduce subscriber churn with cancellation flows, save offers, retention, failed-payment recovery, dunning, pauses, and win-back strategies."
@@ -139,6 +143,10 @@
     "source_description_sha256": "1470e74405509c4f4fc862bfe4e9a08691697040f44de2d0469459fa8812d3da",
     "description": "Optimize post-signup activation, setup, first-run experience, empty states, aha moments, and time to value."
   },
+  "passive-security": {
+    "source_description_sha256": "01d4ce34d4ef7b3134a9d306acd8f81b62136e0e0c17ec1cd5c3b197a1a8d990",
+    "description": "Passively review a live site's security headers, CSP, cookies, TLS, mixed content, exposed environments, client-side secrets, and security.txt."
+  },
   "paywalls": {
     "source_description_sha256": "846c18b6361827cf6ab3e78f82dec2939dcc4d91a220346a01bb20c97ef971cb",
     "description": "Improve in-app paywalls, upgrade prompts, feature gates, trial screens, and mobile subscription-app paywalls."
@@ -171,6 +179,10 @@
     "source_description_sha256": "7e42fb5573746882642f70abd8438f4167090decba14facb4fd6e1958a94573d",
     "description": "Design or improve referral, affiliate, and partner programs, plus review programs: getting more reviews, responding to them, and reusing testimonials."
   },
+  "responsive-audit": {
+    "source_description_sha256": "ad2e02c621a77778650f08680a0c799982dd1ab77087f375ec2c660f24428601",
+    "description": "Check a live website's layout at phone, tablet, laptop, and large-monitor widths: overflow, navigation, tap targets, media, and sticky elements."
+  },
   "revops": {
     "source_description_sha256": "63e21583a10d3e06f02aeb31293089ea6f2b811253bf9ffcc57e35e61581df5c",
     "description": "Improve lead scoring, routing, CRM hygiene, lifecycle and outbound pipeline stages, deal processes, and marketing-to-sales handoffs."
@@ -195,6 +207,10 @@
     "source_description_sha256": "6d300cda47bbd02424ecd2b2aa1f6ab7a4bb3a4a2444484d6edf8983367bca7a",
     "description": "Plan website structure: hierarchy, navigation, URLs, sitemaps, internal linking, choosing a website platform, and migrating without losing traffic."
   },
+  "site-qa": {
+    "source_description_sha256": "61e7bd69a7af08eeb0f9433272eb348b2519685d6c7336ad1e8794b0538292aa",
+    "description": "Find functional defects on a live website in a real browser: console errors, failed requests, broken links, soft 404s. Sets rules for passive reviews."
+  },
   "sms": {
     "source_description_sha256": "c44427260cf2174a6625f20d05eefd9875f3ef96fa558bb0fc441dddc04278dd",
     "description": "Plan SMS, MMS, and WhatsApp campaigns, lifecycle texts, transactional messages, opt-ins, templates, and messaging compliance."
@@ -203,8 +219,24 @@
     "source_description_sha256": "6bac38d2ff4a230a5816022615a0a0860f0a25a03fa1e5cb089367da2bb6fea2",
     "description": "Create, repurpose, or schedule social posts, carousels, and short-video scripts; plan social strategy, listening, and engagement triage."
   },
+  "ux-review": {
+    "source_description_sha256": "63b15b3d396c68580bffc17ab95ef5bc3ed08ba67a18e3ff88f6910231228a57",
+    "description": "Review a live website's usability and wording per audience: task walkthroughs, heuristics, CTAs, term consistency, typos, and German style."
+  },
   "video": {
     "source_description_sha256": "659fa809bd3a18b34120b85bce6ea358883484a12c7fe700fe3e2f0295b97257",
     "description": "Plan and produce AI or programmatic marketing videos, avatars, explainers, product demos, templates, and reference-style edits."
+  },
+  "web-accessibility": {
+    "source_description_sha256": "672de4af19043621f7c86947bf3b10b95de853c9790fb6d96a69fd6102916828",
+    "description": "Audit a live website against WCAG 2.2 AA: keyboard, screen reader semantics, contrast, zoom, reflow, forms, and the WCAG 2.2 additions."
+  },
+  "web-performance": {
+    "source_description_sha256": "dac63b3bceb7983865695c2765efb2358fea85c1fe4a2709eb3aaa5710349a28",
+    "description": "Measure and diagnose a live site's speed: Core Web Vitals from field and lab data, JavaScript bundles, images, fonts, and caching."
+  },
+  "website-compliance": {
+    "source_description_sha256": "3e7ca8847099eb54de71f219df6fedfa2eaab81fd77718f2e17ebf5105618487",
+    "description": "Check a German/EU website for tracking before consent, consent banner design, Impressum, privacy policy gaps, and BFSG accessibility statement."
   }
 }

@@ -1,0 +1,22 @@
+{
+  "skill_name": "audit-report",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Turn these 25 findings from our website review into a report for our developer, plus a CSV for Jira. The security ones must stay confidential.",
+      "expected_output": "Should apply the severity scale (Critical/High/Medium/Low), the finding template with all fields, area-prefixed IDs, separate improvements from defects, keep security findings in a separate section or file and out of the general CSV, produce a UTF-8 CSV with RFC 4180 quoting that parses back, and include summary, what works, and not-tested sections. Should mark assumptions and certainty.",
+      "assertions": [
+        "Uses the four-level severity scale",
+        "Includes all template fields per finding",
+        "Uses area-prefixed IDs",
+        "Separates improvements from defects",
+        "Keeps security findings separate and out of the general CSV",
+        "Produces a CSV that parses back",
+        "Includes what works well and not tested sections",
+        "Labels certainty as observed or inferred",
+        "Keeps the summary within ten lines"
+      ],
+      "files": []
+    }
+  ]
+}

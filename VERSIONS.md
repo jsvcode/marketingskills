@@ -6,10 +6,12 @@ Current versions of all skills. Agents can compare against local versions to che
 |-------|---------|--------------|
 | ab-testing | 2.0.2 | 2026-10-12 |
 | ad-creative | 2.12.2 | 2026-10-26 |
+| ads | 2.7.0 | 2026-10-26 |
 | ai-seo | 2.11.0 | 2026-10-26 |
 | analytics | 2.2.1 | 2026-10-19 |
 | aso | 2.0.2 | 2026-10-08 |
 | attribution | 1.1.6 | 2026-10-19 |
+| audit-report | 1.0.0 | 2026-11-17 |
 | churn-prevention | 2.0.3 | 2026-10-12 |
 | co-marketing | 2.0.3 | 2026-10-12 |
 | cold-email | 2.2.0 | 2026-10-07 |
@@ -38,7 +40,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | marketing-psychology | 2.0.0 | 2026-05-05 |
 | offers | 1.0.2 | 2026-10-12 |
 | onboarding | 2.0.2 | 2026-10-12 |
-| ads | 2.7.0 | 2026-10-26 |
+| passive-security | 1.0.0 | 2026-11-17 |
 | paywalls | 2.1.0 | 2026-10-26 |
 | popups | 2.0.0 | 2026-05-05 |
 | pricing | 2.1.4 | 2026-10-12 |
@@ -47,17 +49,36 @@ Current versions of all skills. Agents can compare against local versions to che
 | prospecting | 1.4.0 | 2026-10-26 |
 | public-relations | 1.2.1 | 2026-10-15 |
 | referrals | 2.2.1 | 2026-10-12 |
+| responsive-audit | 1.0.0 | 2026-11-17 |
 | revops | 2.2.1 | 2026-10-12 |
 | sales-enablement | 2.4.0 | 2026-10-07 |
 | schema | 2.0.2 | 2026-10-08 |
 | seo-audit | 2.2.2 | 2026-10-15 |
 | signup | 2.0.1 | 2026-10-08 |
 | site-architecture | 2.1.0 | 2026-10-06 |
+| site-qa | 1.0.0 | 2026-11-17 |
 | sms | 1.1.0 | 2026-10-02 |
 | social | 2.4.0 | 2026-10-14 |
+| ux-review | 1.0.0 | 2026-11-17 |
 | video | 2.3.0 | 2026-10-26 |
+| web-accessibility | 1.0.0 | 2026-11-17 |
+| web-performance | 1.0.0 | 2026-11-17 |
+| website-compliance | 1.0.0 | 2026-11-17 |
 
 ## Recent Changes
+
+### 2.14.0 (2026-11-17)
+
+Eight new skills for reviewing a live website from the outside and handing the results to a developer. The existing skills cover SEO and conversion; these fill the gaps for function, layout, accessibility, speed, security, privacy, usability, and reporting. All of them share one set of ground rules for passive reviews (read-only, request-level throttling, no form submissions, no guessed paths, evidence and a second verification for every finding). New skills = repo y release; total skills: 60.
+
+- Added **`site-qa`** (1.0.0): functional checks in a real browser (console errors, failed requests, broken links, soft 404s, redirects, entry flows up to the first submission) and the shared ground rules. Ships `scripts/capture.mjs`, a Playwright capture script with request throttling, and `references/browser-setup.md`.
+- Added **`responsive-audit`** (1.0.0): overflow, navigation, typography, tap targets, media, and sticky elements at 320/360/768/1280/1920 px, with a page-by-viewport matrix.
+- Added **`web-accessibility`** (1.0.0): WCAG 2.2 AA with automated and manual checks, the six 2.2 additions called out, 4.1.1 treated as obsolete, and `references/wcag-checklist.md` with test methods for every A/AA criterion.
+- Added **`web-performance`** (1.0.0): field vs. lab data, how to measure under a request limit, payload, images, rendering path, layout shifts, and caching.
+- Added **`passive-security`** (1.0.0): TLS, HSTS, CSP evaluation, security headers, cookie attributes, secrets and source maps in loaded client code, exposed environments, and security.txt, with explicit out-of-scope rules and `references/header-reference.md`.
+- Added **`website-compliance`** (1.0.0): requests and storage before consent, consent banner design, Impressum (§ 5 DDG), privacy policy cross-check against observed third parties, BFSG accessibility statement scope, with `references/legal-reference.md`. Phrases findings as risks, not legal verdicts.
+- Added **`ux-review`** (1.0.0): task walkthroughs per audience, heuristics, message clarity, CTAs, and text quality, with `references/german-text-checklist.md`.
+- Added **`audit-report`** (1.0.0): severity scale, finding template, report structure, confidential security section, CSV export for ticket systems, verification checklist, and cover note, with `references/severity-guide.md` and `references/report-template.md`.
 
 ### 2.13.5 (2026-10-26)
 

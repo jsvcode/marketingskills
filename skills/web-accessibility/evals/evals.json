@@ -1,0 +1,22 @@
+{
+  "skill_name": "web-accessibility",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Is our site WCAG 2.2 AA compliant? https://example.com — we sell to consumers in Germany.",
+      "expected_output": "Should run axe-core on rendered pages including opened menus and modals, then test manually: keyboard, focus visibility and obscuring, accessibility tree, lang attribute, contrast, zoom, reflow at 320 px, text spacing, forms without submitting. Should explicitly check the WCAG 2.2 additions (2.4.11, 2.5.7, 2.5.8, 3.2.6, 3.3.7, 3.3.8) and not report 4.1.1. Should mention BFSG scope and route the accessibility statement to website-compliance. Should state that screen reader results are approximated if no real screen reader is used.",
+      "assertions": [
+        "Combines automated scan with manual testing",
+        "Tests keyboard operation and focus visibility",
+        "Checks WCAG 2.2 additions explicitly",
+        "Does not report 4.1.1 Parsing",
+        "Checks reflow at 320 px",
+        "Maps each finding to a success criterion",
+        "States limits of screen reader approximation",
+        "Routes the accessibility statement to website-compliance",
+        "Uses A11Y- IDs"
+      ],
+      "files": []
+    }
+  ]
+}

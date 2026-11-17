@@ -1,0 +1,22 @@
+{
+  "skill_name": "ux-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Review the texts and navigation of our German B2B site https://example.de. Audiences are managing directors, employees and IT partners.",
+      "expected_output": "Should walk key tasks per audience as a first-time visitor without submitting, apply heuristics, run a five-second test at desktop and mobile, check CTA labels and navigation, and read all text for real errors, term consistency, du/Sie consistency, German typography, long sentences and noun style. Should separate defects from suggestions, quote exact text, and add a term list.",
+      "assertions": [
+        "Defines tasks per audience",
+        "Performs walkthroughs without submitting",
+        "Checks term consistency",
+        "Checks du/Sie consistency",
+        "Checks German typography",
+        "Quotes the exact text in findings",
+        "Separates defects from suggestions",
+        "Includes a term list",
+        "Uses UX- IDs"
+      ],
+      "files": []
+    }
+  ]
+}
