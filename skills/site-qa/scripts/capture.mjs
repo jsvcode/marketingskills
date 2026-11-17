@@ -9,6 +9,8 @@
 //
 // Requests to the target host are throttled (default: one request start per
 // 1000 ms across the whole run). Third-party requests are recorded, not throttled.
+// Router prefetches (Next.js) are skipped so they don't flood the throttle queue.
+// HTTPS_PROXY from the environment is passed to Chromium.
 // The script only navigates and reads. It never clicks, types, or submits.
 //
 // Usage:
@@ -72,7 +74,9 @@ const slug = (u) => {
   return s.slice(0, 120) || "root";
 };
 
-const browser = await chromium.launch();
+// Honor an HTTPS proxy from the environment (Chromium ignores it otherwise).
+const proxyUrl = process.env.HTTPS_PROXY || process.env.https_proxy;
+const browser = await chromium.launch(proxyUrl ? { proxy: { server: proxyUrl } } : {});
 const summary = [];
 
 for (const width of viewports) {
@@ -83,9 +87,16 @@ for (const width of viewports) {
     deviceScaleFactor: 1,
   });
   await context.route("**/*", async (route) => {
-    const host = new URL(route.request().url()).hostname;
-    if (isTarget(host)) await throttle();
-    await route.continue();
+    const req = route.request();
+    const u = new URL(req.url());
+    // Framework prefetches of other routes (Next.js sends Next-Router-Prefetch) are not
+    // needed for the check and would flood the throttle queue. Skip them.
+    if (req.headers()["next-router-prefetch"] || req.headers()["purpose"] === "prefetch") {
+      await route.abort().catch(() => {});
+      return;
+    }
+    if (isTarget(u.hostname)) await throttle();
+    await route.continue().catch(() => {}); // page may have closed while queued
   });
 
   for (const url of urls) {
@@ -103,6 +114,7 @@ for (const width of viewports) {
       if (r.status() >= 400) record.httpErrors.push({ url: r.url(), status: r.status() });
     });
 
+    console.log(new Date().toISOString().slice(11, 19), "load", url, `@${width}`);
     try {
       const res = await page.goto(url, { waitUntil: "load", timeout: 90000 });
       await page.waitForLoadState("networkidle", { timeout: 30000 }).catch(() => {});
