@@ -1,0 +1,22 @@
+{
+  "skill_name": "website-compliance",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Check whether our German site https://example.de loads anything before cookie consent, and whether the Impressum and Datenschutzerklärung are complete.",
+      "expected_output": "Should load pages in a fresh context without interacting with the banner, record third-party requests, cookies and storage, then compare with reject and accept. Should check the banner for an equal reject option, no pre-ticked boxes, and easy withdrawal. Should check the Impressum against § 5 DDG and the privacy policy against Art. 13 DSGVO and the observed third parties. Should phrase findings as risks, not legal verdicts, and use LEG- IDs with a third-party table.",
+      "assertions": [
+        "Records requests and cookies before any consent interaction",
+        "Compares reject and accept states",
+        "Checks reject option on the first layer",
+        "Checks Impressum against § 5 DDG",
+        "Cross-checks privacy policy against observed third parties",
+        "Phrases findings as risks",
+        "Recommends legal review for high-risk items",
+        "Includes a third-party table",
+        "Uses LEG- IDs"
+      ],
+      "files": []
+    }
+  ]
+}

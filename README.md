@@ -81,6 +81,7 @@ See each skill's **Related Skills** section for the full dependency map.
 | [analytics](skills/analytics/) | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions... |
 | [aso](skills/aso/) | When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO... |
 | [attribution](skills/attribution/) | When the user wants to figure out which marketing actually drives conversions and revenue, choose or interpret an... |
+| [audit-report](skills/audit-report/) | When the user wants findings from a website review, QA pass, or audit written up as a report a developer can act on —... |
 | [churn-prevention](skills/churn-prevention/) | When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or... |
 | [co-marketing](skills/co-marketing/) | When the user wants to find co-marketing partners, plan joint campaigns, or brainstorm partnership opportunities. Use... |
 | [cold-email](skills/cold-email/) | Write and run B2B cold outbound that gets replies, from cold emails and follow-ups to sending setup, LinkedIn,... |
@@ -109,6 +110,7 @@ See each skill's **Related Skills** section for the full dependency map.
 | [marketing-psychology](skills/marketing-psychology/) | When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when... |
 | [offers](skills/offers/) | When the user wants to design, construct, or improve an offer — the thing they actually sell — including value framing,... |
 | [onboarding](skills/onboarding/) | When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also... |
+| [passive-security](skills/passive-security/) | When the user wants a live website's security posture checked passively from the outside — HTTP security headers,... |
 | [paywalls](skills/paywalls/) | When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use... |
 | [popups](skills/popups/) | When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also... |
 | [pricing](skills/pricing/) | When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions... |
@@ -117,15 +119,21 @@ See each skill's **Related Skills** section for the full dependency map.
 | [prospecting](skills/prospecting/) | When the user wants to find, qualify, and build a list of prospects to reach out to, across B2B SaaS, general B2B, or... |
 | [public-relations](skills/public-relations/) | When the user wants help with public relations, earned media, press coverage, journalist outreach, or media strategy... |
 | [referrals](skills/referrals/) | When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy.... |
+| [responsive-audit](skills/responsive-audit/) | When the user wants to check how a live website looks and works across screen sizes — phones, tablets, laptops, large... |
 | [revops](skills/revops/) | When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes.... |
 | [sales-enablement](skills/sales-enablement/) | When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also... |
 | [schema](skills/schema/) | When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user... |
 | [seo-audit](skills/seo-audit/) | When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO... |
 | [signup](skills/signup/) | When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the... |
 | [site-architecture](skills/site-architecture/) | When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal... |
+| [site-qa](skills/site-qa/) | When the user wants a live website checked for functional defects from the outside — broken links, console errors,... |
 | [sms](skills/sms/) | When the user wants to plan, build, or optimize SMS, MMS, or WhatsApp marketing — including welcome flows, abandoned... |
 | [social](skills/social/) | When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram,... |
+| [ux-review](skills/ux-review/) | When the user wants a live website reviewed for usability and wording — whether visitors understand the offer, find... |
 | [video](skills/video/) | When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks. Also use... |
+| [web-accessibility](skills/web-accessibility/) | When the user wants a live website checked for accessibility against WCAG 2.2 level AA — keyboard use, screen reader... |
+| [web-performance](skills/web-performance/) | When the user wants the speed and page weight of a live website measured and diagnosed — Core Web Vitals, JavaScript... |
+| [website-compliance](skills/website-compliance/) | When the user wants a live website checked for privacy and legal-page compliance from the outside — legal notice... |
 <!-- SKILLS:END -->
 
 ## Installation
@@ -367,6 +375,16 @@ You can also invoke skills directly:
 ### Sales & RevOps
 - `revops` - Lead lifecycle, scoring, routing, pipeline management
 - `sales-enablement` - Sales decks, one-pagers, objection docs, demo scripts
+
+### Website QA & Compliance
+- `site-qa` - Functional checks and ground rules for passive website reviews
+- `responsive-audit` - Layout across screen sizes
+- `web-accessibility` - WCAG 2.2 AA audits
+- `web-performance` - Core Web Vitals, bundle and image weight
+- `passive-security` - Security headers, cookies, TLS, exposed resources
+- `website-compliance` - Impressum, privacy policy, consent, BFSG (Germany/EU)
+- `ux-review` - Usability and wording
+- `audit-report` - Findings report with severities and CSV export
 
 ## Contributing
 

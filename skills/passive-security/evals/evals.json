@@ -1,0 +1,22 @@
+{
+  "skill_name": "passive-security",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Check the security headers and cookies on https://example.com. We own it. Keep it passive.",
+      "expected_output": "Should check HTTPS redirect, TLS versions, HSTS, CSP quality, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, framing protection, server disclosure, cookie flags, mixed content, secrets and source maps in loaded JS, security.txt. Should not guess paths, scan, fuzz, or attempt logins. Should redact any secret and put findings in a confidential section with SEC- IDs and config snippets.",
+      "assertions": [
+        "Checks HTTPS redirect and HSTS",
+        "Evaluates CSP content, not just presence",
+        "Checks cookie Secure, HttpOnly, SameSite",
+        "Checks security.txt per RFC 9116",
+        "Checks loaded JS for secrets and source maps",
+        "Does not guess paths or run scanners",
+        "Redacts secrets",
+        "Keeps findings in a separate confidential section",
+        "Uses SEC- IDs with fix snippets"
+      ],
+      "files": []
+    }
+  ]
+}

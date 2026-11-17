@@ -1,0 +1,21 @@
+{
+  "skill_name": "web-performance",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our site feels slow. Check Core Web Vitals and bundle size for https://example.com. Max one request per second please.",
+      "expected_output": "Should explain that request throttling invalidates timing metrics, and offer field data from CrUX/PageSpeed Insights or one unthrottled load with approval. Should still analyze weight under throttling: JS bytes per chunk, image intrinsic vs displayed size, formats, LCP image loading, fonts, render-blocking resources, cache headers, compression. Should label each finding field or lab and use PERF- IDs.",
+      "assertions": [
+        "Explains that throttled timings are not valid",
+        "Prefers field data when available",
+        "Asks before an unthrottled load",
+        "Analyzes JavaScript bundle size",
+        "Compares image intrinsic and displayed size",
+        "Checks LCP element and its loading",
+        "Labels field vs lab source",
+        "Uses PERF- IDs"
+      ],
+      "files": []
+    }
+  ]
+}
